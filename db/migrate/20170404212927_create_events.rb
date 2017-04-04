@@ -4,8 +4,8 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :event_name
       t.string :venue
       t.string :address
-      t.DATE :date
-      t.TIME :time
+      t.date :date
+      t.time :time
 
       t.timestamps
     end

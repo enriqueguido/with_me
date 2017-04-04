@@ -1,3 +1,27 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'events/new'
+
+  get 'events/create'
+
+  get 'events/update'
+
+  get 'events/destroy'
+
+  get 'comments/new'
+
+  get 'comments/create'
+
+  get 'comments/update'
+
+  get 'comments/destroy'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
+  resources :events
 end
