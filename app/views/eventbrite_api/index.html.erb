@@ -1,0 +1,6 @@
+<p>
+<% @response['events'].each do |event| %>
+<%= event['name']['text'] %> <br>
+<%= image_tag event['logo']['url'] %>
+<% end %>
+</p>

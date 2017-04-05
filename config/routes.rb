@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'eventbrite_api/index'
+
   get 'eventbrite_api/new'
 
   get 'eventbrite_api/create'
@@ -34,4 +36,5 @@ Rails.application.routes.draw do
   resources :events
   resources :users
   resources :comments
+  resources :eventbrite_api
 end
