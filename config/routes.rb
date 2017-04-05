@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'eventbrite_api/index'
 
   get 'eventbrite_api/new'
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
   get 'eventbrite_api/update'
 
   get 'eventbrite_api/destroy'
+
+  root "events#index"
+
 
   get 'events/new'
 
