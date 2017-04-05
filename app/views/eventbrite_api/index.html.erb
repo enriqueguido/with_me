@@ -1,6 +1,13 @@
 <p>
 <% @response['events'].each do |event| %>
 <%= event['name']['text'] %> <br>
-<%= image_tag event['logo']['url'] %>
+<%= event['description']['text']%> <br>
+<%= event['start']['timezone']%> <br>
+<%= event['start']['local']%> <br>
+<%= event['start']['utc']%> <br>
+<%= event['end']['timezone']%> <br>
+<%= event['end']['local']%> <br>
+<%= event['end']['utc']%> <br>
+<%= image_tag event['logo']['url'] %> <br>
 <% end %>
 </p>
