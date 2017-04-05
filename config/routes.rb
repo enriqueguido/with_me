@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   get 'users/destroy'
 
   resources :events
+  resources :users
+  resources :comments
 end
