@@ -4,10 +4,10 @@
 <%= event['description']['text']%> <br>
 <%= event['start']['timezone']%> <br>
 <%= event['start']['local']%> <br>
-<%= event['start']['utc']%> <br>
+<%= DateTime.parse(event['start']['utc']).to_s %> <br>
 <%= event['end']['timezone']%> <br>
 <%= event['end']['local']%> <br>
-<%= event['end']['utc']%> <br>
+<%= Date.parse(event['end']['utc']).to_s%> <br>
 <%= image_tag event['logo']['url'] %> <br>
 <% end %>
 </p>
