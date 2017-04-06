@@ -3,11 +3,9 @@
 <%= event['name']['text'] %> <br>
 <%= event['description']['text']%> <br>
 <%= event['start']['timezone']%> <br>
-<%= event['start']['local']%> <br>
-<%= DateTime.parse(event['start']['utc']).to_s %> <br>
+<%= Time.iso8601(event['start']['utc']).to_s %> <br>
 <%= event['end']['timezone']%> <br>
-<%= event['end']['local']%> <br>
-<%= Date.parse(event['end']['utc']).to_s%> <br>
+<%= Time.iso8601(event['end']['utc']).to_s%> <br>
 <%= image_tag event['logo']['url'] %> <br>
 <% end %>
 </p>
