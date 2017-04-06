@@ -36,8 +36,10 @@ Rails.application.routes.draw do
 
   get 'users/destroy'
 
-  resources :events
+  resources :events do
+    resources :comments
+end
+
   resources :users
-  resources :comments
   resources :eventbrite_api
 end

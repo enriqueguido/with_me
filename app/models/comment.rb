@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-    belongs_to :users
+    attr_accesssible :body, :commenter, :event
     belongs_to :event
 end
