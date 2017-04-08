@@ -1,1 +1,19 @@
-<h1>Hello</h1>
+<% @events.each do |event| %>
+<p>
+  <%= event.name %>
+  <%= event.description %>
+  <%= event.tz %>
+  <%= event.start %>
+  <%= event.end %>
+  <%= image_tag event.logo%>
+</p>
+<% end %>
+
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @events.blank? %>
+  <h4>There are no events containing the term <%= params[:search] %>.</h4>
+<% end %>

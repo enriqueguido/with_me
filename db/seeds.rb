@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ # @response['events'].each do |event|
+ #   Event.new(
+ #   name: event['name']['text'],
+ #   description: event['description']['text'],
+ #   start: event['start']['timezone'],
+ #   start: Time.iso8601(event['start']['local']).to_s
+ #   end: Time.iso8601(event['end']['local']).to_s,
+ #   logo: image_tag event['logo']['url']
+ #   )
+ puts "Starting"
+ @url = "https://www.eventbriteapi.com/v3/events/search?token=SM4RJIL6AMM75DCOVOFM"
+ puts "Calling API"
+ @response = HTTParty.get @url
+ puts "done"
+  @response['events'].each do |event|
+    Event.create(
+      name: event['name']['text'],
+      description: event['description']['text'],
+      tz: event['start']['timezone'],
+      start: DateTime.iso8601(event['start']['local']).to_s,
+      end: DateTime.iso8601(event['end']['local']).to_s,
+      logo: event['logo']['url']
+      )
+  end
+
+# Time.strptime(event['start']['local'],"%Y-%m-%dT%H:%M:%s").to_s
