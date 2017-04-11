@@ -30,5 +30,3 @@
       logo: event['logo']['url']
       )
   end
-
-# Time.strptime(event['start']['local'],"%Y-%m-%dT%H:%M:%s").to_s

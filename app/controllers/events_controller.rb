@@ -10,9 +10,11 @@ class EventsController < ApplicationController
   end
 
   def new
+      @event = Event.new
   end
 
   def create
+      @event = Event.create
   end
 
   def update
@@ -23,5 +25,9 @@ class EventsController < ApplicationController
 
   def show
   @event = Event.find(params[:id])
+  end
+
+  def event_info
+    
   end
 end

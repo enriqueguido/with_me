@@ -1,31 +1,16 @@
 class CommentsController < ApplicationController
-  def new
-      @comment = Comment.new(params[:comment])
 
-      if @comment.save
-      flash[:notice] = 'Comment was successfully created.'
-      redirect_to(@event)
-    else
-      flash[:notice] = "Error creating comment: #{@comment.errors}"
-      redirect_to(@event)
-    end
-  end
+    def create
+       @event = Event.find(params[:post_id])
+       @comment = @event.comments.create(params[:comment])
+       redirect_to post_path(@event)
+     end
 
-  def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
+     def destroy
+       @event = Event.find(params[:post_id])
+       @comment = @event.comments.find(params[:id])
+       @comment.destroy
+       redirect_to post_path(@event)
+     end
 
-    redirect_to(@event)
-  end
-end
-  end
-
-  def create
-  end
-
-  def update
-  end
-
-  def destroy
-  end
 end
