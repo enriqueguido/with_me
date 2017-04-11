@@ -28,6 +28,6 @@ class EventsController < ApplicationController
   end
 
   def event_info
-    
+
   end
 end

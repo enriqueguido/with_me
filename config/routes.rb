@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get 'events/destroy'
 
+  get 'events/event_info'
+
   get 'comments/new'
 
   get 'comments/create'

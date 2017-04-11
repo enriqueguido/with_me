@@ -12,6 +12,10 @@ class Event < ApplicationRecord
   has_many :comments
 
   def self.search(search)
-    where("name LIKE ? OR tz LIKE ? OR 'start' LIKE ? OR 'end' LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+    if search
+      where("name ILIKE ? OR tz ILIKE ? OR 'start' ILIKE ? OR 'end' ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+    else
+      scope
+    end
   end
 end
