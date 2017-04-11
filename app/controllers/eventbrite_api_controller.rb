@@ -1,9 +1,7 @@
 class EventbriteApiController < ApplicationController
 
   def index
-    @url = "https://www.eventbriteapi.com/v3/events/search?token=SM4RJIL6AMM75DCOVOFM"
-    @response = HTTParty.get @url
-    @response
+    @events = Event.all
   end
 
   def new

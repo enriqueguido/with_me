@@ -1,51 +1,20 @@
-<h1>Single Post</h1>
 
-<p id="notice"><%= notice %></p>
-
+<% @events.each do |event| %>
 <p>
-  <b>Name:</b>
-  <%= @event.name %>
+  <%= event.name %>
+  <%= event.description %>
+  <%= event.tz %>
+  <%= event.start %>
+  <%= event.end %>
+  <%= image_tag event.logo%>
 </p>
-
-<p>
-  <b>Title:</b>
-  <%= @event.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @event.content %>
-</p>
-
-<h2>Comments</h2>
-<% @event.comments.each do |comment| %>
-  <p>
-    <b>Commenter:</b>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <b>Comment:</b>
-    <%= comment.body %>
-  </p>
 <% end %>
 
-<h2>Add a comment:</h2>
-<%= form_for([@event, @event.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.label :commenter %><br />
-    <%= f.text_field :commenter %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
+    <%= submit_tag "Search", :name => nil %>
 <% end %>
 
-<br />
-
-<%= link_to 'Edit Post', edit_events_path(@event) %> |
-<%= link_to 'Back to Posts', events_path %> |
+<% if @events.blank? %>
+  <h4>There are no events containing the term <%= params[:search] %>.</h4>
+<% end %>
