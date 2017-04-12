@@ -6,7 +6,7 @@
   <%= event.tz %>
   <%= event.start %>
   <%= event.end %> -->
-  <%= image_tag event.logo%>
+  <%= link_to image_tag(event.logo), event_info_path(event) %>
 </p>
 <% end %>
 

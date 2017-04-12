@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+# before_action :api_call, only: [:index]
 
   def index
     @events = Event.all
@@ -24,10 +25,16 @@ class EventsController < ApplicationController
   end
 
   def show
-  @event = Event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def event_info
+      @event = Event.find(params[:id])
+  end
 
+private
+
+  def api
+    api_call
   end
 end

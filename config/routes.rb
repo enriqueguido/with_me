@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'events/destroy'
 
-  get 'events/event_info'
+  get 'events/:id' => 'events#event_info', as: 'event_info'
 
   get 'comments/new'
 

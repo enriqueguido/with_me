@@ -15,7 +15,7 @@ class Event < ApplicationRecord
     if search
       where("name ILIKE ? OR tz ILIKE ? OR 'start' ILIKE ? OR 'end' ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
     else
-      scope
+      @event
     end
   end
 end
