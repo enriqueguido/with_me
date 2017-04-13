@@ -1,3 +1,70 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// New user screen
+#log-in{
+  background-color: #f67f00;
+}
+
+#sign-up{
+  color: #f67f00;
+}
+
+#sign-up-back{
+  background-image:url(https://media.giphy.com/media/3oEduXeT0j1Bl5uWHK/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: 175vh;
+}
+
+#logo{
+  z-index: 1000;
+  width: 100vw;
+  margin-top: -18em;
+}
+// New user screen
+
+#log-in-back{
+  background-image:url(https://media.giphy.com/media/4XeLHhzQy6YyA/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: 180vh;
+}
+
+#login-logo{
+  z-index: 1000;
+  width: 100vw;
+  margin-top: -10em;
+}
+// New user screen
+
+// search bar
+.input-group{
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.25em;
+}
+
+.btn-primary{
+  background-color: #f67f00;
+  border-color: #f67f00;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {
+  color: #ffffff;
+  background-color: #f67f00;
+  border-color: #f67f00;
+}
+
+.form-control:focus{
+  border-color: #f67f00;
+}
+
+.form-control,
+.btn-primary{
+  height: 3em;
+}
+// search bar
