@@ -4,11 +4,24 @@
     <meta charset="utf-8">
     <title>Sign up</title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
   </head>
   <body id="sign-up-back" >
     <img id="logo" src="http://i66.tinypic.com/2jca5ck.jpg" border="0" alt="Image and video hosting by TinyPic">
 
-    
+  <div>
+    <% if current_user %>
+      Signed in as <strong><%= current_user.name %></strong>!
+      <%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <% else %>
+      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <% end %>
+  </div>
+
+
 
   </body>
 </html>

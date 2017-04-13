@@ -1,5 +1,26 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+      get 'auth/:provider/callback', to: 'sessions#create'
+      get 'auth/failure', to: redirect('/')
+      get 'signout', to: 'sessions#destroy', as: 'signout'
+
+      resources :sessions, only: [:create, :destroy]
+      # resource :home, only: [:show]
+
+      # root to: "home#show"
+
+
+  get 'home/show'
+
   get 'eventbrite_api/index'
 
   get 'eventbrite_api/new'
@@ -30,7 +51,7 @@ Rails.application.routes.draw do
 
   get 'comments/destroy'
 
-  get 'users/new'
+  get 'users/new' => 'users#new'
 
   get 'users/create'
 
