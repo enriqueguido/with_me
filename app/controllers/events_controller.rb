@@ -32,9 +32,9 @@ class EventsController < ApplicationController
       @event = Event.find(params[:id])
   end
 
-private
-
-  def api
-    api_call
-  end
+# private
+#
+#   def api
+#     api_call
+#   end
 end

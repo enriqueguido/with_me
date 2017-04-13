@@ -2,10 +2,6 @@
 <% @events.each do |event| %>
 <p>
   <%= event.name %>
-  <!-- <%= event.description %>
-  <%= event.tz %>
-  <%= event.start %>
-  <%= event.end %> -->
   <%= link_to image_tag(event.logo), event_info_path(event) %>
 </p>
 <% end %>
@@ -13,6 +9,7 @@
 <%= form_tag(root_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
     <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search by city", :name => 'city' %>
 <% end %>
 
 <% if @events.blank? %>

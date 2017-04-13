@@ -4,7 +4,7 @@ module EventsHelper
     if search.empty?
     url = "https://www.eventbriteapi.com/v3/events/search?token=SM4RJIL6AMM75DCOVOFM"
   else
-      url = "https://www.eventbriteapi.com/v3/events/search?q=#{}&token=SM4RJIL6AMM75DCOVOFM"
+      url = "https://www.eventbriteapi.com/v3/events/search?q=#{search}&token=SM4RJIL6AMM75DCOVOFM"
     end
     response = HTTParty.get url
 
