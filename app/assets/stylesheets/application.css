@@ -17,10 +17,10 @@
 #event-info {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 };
 
 #event-info-content {
-
+    width: 80%;
 };
