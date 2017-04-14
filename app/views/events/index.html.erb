@@ -8,9 +8,6 @@
 
 <% @events.each do |event| %>
 <div id="event">
-  <%= image_tag event.logo, :id => "event_pic" %>
-  <%= event.name %>
-
   <%= link_to image_tag(event.logo), event_info_path(event), :id => "event_pic" %>
   <div id="event_name_wrapper">
     <div id="event_name"><%= event.name %></div>
