@@ -12,16 +12,14 @@
   <body id="sign-up-back" >
     <img id="logo" src="http://i66.tinypic.com/2jca5ck.jpg" border="0" alt="Image and video hosting by TinyPic">
 
-  <div>
-    <% if current_user %>
-      Signed in as <strong><%= current_user.name %></strong>!
+    <div id="user-widget">
+      <% if current_user %>
+        Welcome <strong><%= current_user.name %></strong>!
       <%= link_to "Sign out", signout_path, id: "sign_out" %>
-    <% else %>
-      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-    <% end %>
-  </div>
-
-
+      <% else %>
+        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+      <% end %>
+    </div>
 
   </body>
 </html>
