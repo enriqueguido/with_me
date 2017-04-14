@@ -21,14 +21,10 @@
 
 <% @event.comments.each do |comment| %>
   <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-</p>
-
-  <p>
-    <strong>Comment:</strong>
+    <strong><%= comment.commenter %>: </strong>
     <%= comment.body %>
 </p>
+
 <% end %>
 
 </div>
