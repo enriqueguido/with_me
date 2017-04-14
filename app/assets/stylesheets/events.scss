@@ -1,13 +1,4 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 .card {
-    /* Add shadows to create the "card" effect */
-    //  color: white;
-    //  font: bold 12px/45px Helvetica, Sans-Serif;
-    //  letter-spacing: -1px;
-    //  background: rgb(0, 0, 0); /* fallback color */
-    //  background: rgba(0, 0, 0, 0.7);
     width: 100vw;
     word-break: break-all;
     font-size: 3em;
@@ -19,12 +10,6 @@
     color: #f67f00;
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
 #event {
     width: 100vw;
     word-break: break-all;
@@ -33,11 +18,11 @@
     margin-right: 0;
     font-weight:bold;
     font-family: 'BioRhyme', serif;
-    text-shadow: 4px 4px black;
-    color: #f67f00;
+    color: white;
+
 }
 
-#event_pic{
+img{
   width:100vw;
   color: white;
   font: bold 12px/45px Helvetica, Sans-Serif;
@@ -48,8 +33,17 @@
 }
 
 #event_name{
-  background-color: blue;
-  position: top;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -12rem;
+  width: 100;
+  height: 12rem;
+  overflow:hidden;
+
+}
+
+#event_name_wrapper{
+  height:0;
 }
 
 #search-form{
@@ -59,4 +53,11 @@
 
 #search{
   width: 78.6vw;
+
 };
+
+h4{
+  font-family: 'BioRhyme', serif;
+  font-weight: bold;
+  font-size: 6em;
+}
