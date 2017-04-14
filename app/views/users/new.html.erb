@@ -5,13 +5,16 @@
     <title>Sign up</title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
+<!-- Sign in with Google -->
+<%#= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+ <%#= javascript_include_tag "application", "data-turbolinks-track" => true %>
+ <%#= csrf_meta_tags %>
+<!-- Sign in with Google -->
   </head>
   <body id="sign-up-back" >
     <img id="logo" src="http://i66.tinypic.com/2jca5ck.jpg" border="0" alt="Image and video hosting by TinyPic">
 
+<!-- Sign in with Facebook -->
     <div id="user-widget">
       <% if current_user %>
         Welcome <strong><%= current_user.name %></strong>!
@@ -20,6 +23,24 @@
         <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
       <% end %>
     </div>
+<!-- Sign in with Facebook -->
+
+<!-- Sign in with Google -->
+    <!-- <div> -->
+      <%# if current_user %>
+        <!-- Signed in as <strong><%#= current_user.name %></strong>! -->
+        <%#= link_to "Sign out", signout_path, id: "sign_out" %>
+      <%# else %>
+        <%#= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+      <%# end %>
+    <!-- </div> -->
+<!-- Sign in with Google -->
+    <div>
+      <%#= yield %>
+    </div>
+
+    <%= link_to "Sing up", signup_path %>
+    <%= link_to "Log In", login_index_path %>
 
   </body>
 </html>

@@ -9,10 +9,12 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
+# ======================== Facebook & Google Routes ========================
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
-  
+# ======================== Facebook & Google Routes ========================
+
   get 'home/show'
 
   get 'eventbrite_api/index'
@@ -58,5 +60,7 @@ Rails.application.routes.draw do
 end
 
   resources :users
-  resources :eventbrite_api
+  get '/signup' => 'users#signup', as: 'signup'
+  # resources :eventbrite_api
+  resources :login
 end
