@@ -1,6 +1,50 @@
-<%= @event.name %>
-<%= @event.description  %>
-<%= @event.tz %>
-<%= @event.start %>
-<%= @event.end %>
-<%= image_tag @event.logo %>
+<div id="event-info">
+
+<div id="event-info-content">
+
+<img class= "event-logo"><%= image_tag @event.logo %></img>
+<h1><%= @event.name %></h1>
+<p><%= @event.description  %></p>
+<p><%= @event.tz %></p>
+<p><%= @event.start %></p>
+<p><%= @event.end %></p>
+
+</div>
+
+<!-- COMMENT SECTION BELOW -->
+<!-- ********************* -->
+
+<div id="comment-section">
+
+<h2>Comments</h2>
+<% @event.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@event, @event.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', event_path %>
+
+</div>

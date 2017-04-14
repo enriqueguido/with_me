@@ -9,7 +9,6 @@ class Event < ApplicationRecord
   validates :name, :presence => true,
                     :length => { :minimum => 5 }
 
-  has_many :comments
 
   def self.search(search)
     if search

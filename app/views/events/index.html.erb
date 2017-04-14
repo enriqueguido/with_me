@@ -23,7 +23,8 @@
 
 <% @events.each do |event| %>
 <div id="event">
-  <%= image_tag event.logo, :id => "event_pic"%><%= event.name %>
+  <%= image_tag event.logo, :id => "event_pic" %>
+  <%= event.name %>
 </div>
 
 <% end %>

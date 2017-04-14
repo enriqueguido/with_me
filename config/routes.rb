@@ -22,14 +22,6 @@ Rails.application.routes.draw do
 
   get 'events/:id' => 'events#event_info', as: 'event_info'
 
-  get 'comments/new'
-
-  get 'comments/create'
-
-  get 'comments/update'
-
-  get 'comments/destroy'
-
   get 'users/new'
 
   get 'users/create'
@@ -39,8 +31,8 @@ Rails.application.routes.draw do
   get 'users/destroy'
 
   resources :events do
-    resources :comments
-end
+      resources :comments
+  end
 
   resources :users
   resources :eventbrite_api
