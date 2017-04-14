@@ -16,5 +16,9 @@
 <% end %>
 
 <% if @events.blank? %>
-  <h4>There are no events containing the term <%= params[:search] %>.</h4>
+  <div id="error-back">
+    <div id="error-content">
+      <h4>There are no events containing the term <%= params[:search] %>.</h4>
+    </div>
+  </div>
 <% end %>
