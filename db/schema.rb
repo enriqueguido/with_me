@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413202911) do
+ActiveRecord::Schema.define(version: 20170414201223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,8 +41,12 @@ ActiveRecord::Schema.define(version: 20170413202911) do
     t.string   "password"
     t.string   "gender"
     t.integer  "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "provider"
+    t.integer  "uid"
+    t.string   "name"
+    t.string   "password_confirmation"
   end
 
   add_foreign_key "comments", "events"
