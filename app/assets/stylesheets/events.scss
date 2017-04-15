@@ -16,21 +16,13 @@
 }
 
 .btn-default{
-  font-size: 4em;
   float: right;
-  margin-right: .17em;
-  margin-top: .40em;
 }
 
 //nav
-
-.input-group{
-  width: 70%;
-}
-
 .form-control{
   font-size: 3em;
-  width: 79.6% !important;
+  width: 80.7% !important;
 }
 
 .input-group-btn{
@@ -39,7 +31,22 @@
 
 .btn-basic{
   font-size: 3em;
-  padding: .75em;
+}
+
+#search-btn{
+  width: 4.5em;
+  text-align: center;
+  font-size: 3em;
+  height: 3em;
+  background-color: #f67f00;
+  color: white;
+}
+
+#login-btn{
+  width: 4.5em;
+  text-align: center;
+  font-size: 3em;
+  height: 3em;
 }
 //search bar
 
