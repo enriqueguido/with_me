@@ -1,18 +1,20 @@
-
 <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
 
-
-
 <div id="nav-div">
+  <span id="nav-text">
+    Go With Me
+  </span>
   <button type="button" class="btn btn-default">Log In
   </button>
 </div>
 
-<div id="search">
-<%= form_tag(root_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
-    <%= submit_tag "Search", :name => nil %>
+<div id="search" class="input-group">
+<span class="input-group-btn">
+<%= form_tag(root_path, :method => "get", id: "search-form", ) do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Events", :class => "form-control"%>
+    <%= submit_tag "Search", :name => nil, :class => "btn-basic"  %>
 <% end %>
+</span>
 </div>
 
 <% @events.each do |event| %>

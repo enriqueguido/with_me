@@ -1,16 +1,49 @@
+//nav
+
 #nav-div{
-  height:8.8em;
+  height:8.9em;
   background-color: #f67f00;
+  margin-top: -1em;
+}
+
+#nav-text{
+  display: inline-block;
+  font-size: 5em;
+  color: white;
+  font-family: 'BioRhyme', serif;
+  margin-left: 3.4em;
+  padding-top: 20px;
 }
 
 .btn-default{
   font-size: 4em;
   float: right;
-  margin-right: .25em;
-  margin-top: .25em;
+  margin-right: .17em;
+  margin-top: .40em;
 }
 
+//nav
 
+.input-group{
+  width: 70%;
+}
+
+.form-control{
+  font-size: 3em;
+  width: 79.6% !important;
+}
+
+.input-group-btn{
+  font-size: 1em;
+}
+
+.btn-basic{
+  font-size: 3em;
+  padding: .75em;
+}
+//search bar
+
+//Events
 .card {
     width: 100vw;
     word-break: break-all;
@@ -55,16 +88,9 @@ img{
 #event_name_wrapper{
   height:0;
 }
+//Events
 
-#search-form{
-  width: 100vw;
-  font-size: 4em;
-}
-
-#search{
-  width: 78.5vw;
-};
-
+//Errors
 h4{
   font-family: 'BioRhyme', serif;
   font-weight: bold;
