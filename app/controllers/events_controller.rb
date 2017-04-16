@@ -18,6 +18,11 @@ class EventsController < ApplicationController
       @event = Event.create
   end
 
+  def edit
+     @comment = Comment.find(params[:id])
+     @comment = Comment.update(:comment)
+  end
+
   def update
   end
 

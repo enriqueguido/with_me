@@ -2,7 +2,7 @@
 
 <img class= "event-logo"><%= image_tag @event.logo %></img>
 
-<div id="event-info-content">
+<div id="event-info-content event_name">
 <center>
 <h1><%= @event.name %></h1>
 <p><%= @event.description  %></p>
@@ -21,9 +21,11 @@
 
 <% @event.comments.each do |comment| %>
   <p>
+    <%= link_to 'Edit', edit_event_comment_path(@event) %>
+    <%= link_to 'Delete', comments_destroy_path :comment %>
     <strong><%= comment.commenter %>: </strong>
     <%= comment.body %>
-</p>
+    </p>
 
 <% end %>
 
@@ -47,9 +49,12 @@
 
 </div>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', event_path %>
+<%= link_to 'Back', root_path %>
+
 </center>
+
 </div>
+
 </div>
+
 </div>
