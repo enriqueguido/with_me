@@ -45,11 +45,30 @@
     <div>
       <%#= yield %>
     </div>
-    <div id="fb-btn">
 
+
+    <div id="fb-btn">
+      <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
+      <span id="fb-text">
+          Signup with Facebook
+      </span>
     </div>
-    <%= link_to "Sign up", signup_path %>
-    <%= link_to "Log In", login_index_path %>
+
+  <%= link_to signup_path do %>
+    <div id="login-btn-new">
+      <p id="login-text">
+        Log in
+      </p>
+    </div>
+  <% end %>
+
+  <%= link_to login_index_path do %>
+    <div id="sign-btn-new">
+      <p id="sign-text">
+        Sign up
+      </p>
+    </div>
+  <% end %>
 
   </body>
 </html>
