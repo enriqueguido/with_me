@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
-
   get 'sessions/create'
 
   get 'sessions/destroy'

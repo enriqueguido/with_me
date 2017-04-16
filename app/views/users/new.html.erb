@@ -27,7 +27,12 @@
         Welcome <strong><%= current_user.name %></strong>!
       <%= link_to "Sign out", signout_path, id: "sign_out" %>
       <% else %>
+    <div id="fb-btn">
+      <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
+      <span id="fb-text">
         <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+      </span>
+    </div>
       <% end %>
     </div>
 <!-- Sign in with Facebook -->
@@ -46,18 +51,18 @@
       <%#= yield %>
     </div>
 
-
+<!--
     <div id="fb-btn">
       <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
       <span id="fb-text">
           Signup with Facebook
       </span>
-    </div>
+    </div> -->
 
   <%= link_to signup_path do %>
     <div id="login-btn-new">
       <p id="login-text">
-        Log in
+        Sign up
       </p>
     </div>
   <% end %>
@@ -65,7 +70,7 @@
   <%= link_to login_index_path do %>
     <div id="sign-btn-new">
       <p id="sign-text">
-        Sign up
+        Log in
       </p>
     </div>
   <% end %>

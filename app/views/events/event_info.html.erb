@@ -4,8 +4,6 @@
   <span id="nav-text">
     Go With Me
   </span>
-  <button type="button" class="btn btn-default" id="login-btn">Log In
-  </button>
 </div>
 
 <div id="search" class="input-group">
@@ -52,7 +50,7 @@
 <h2>Add a comment:</h2>
 <%= form_for([@event, @event.comments.build]) do |f| %>
   <p id="commenter">
-    <%= f.label :commenter %><br>
+    <%= f.label :user_name %><br>
     <%= f.text_field :commenter %>
   </p>
   <p id="comment-body">
