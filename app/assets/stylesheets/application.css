@@ -14,7 +14,7 @@
  *= require_self
  */
 
-#event-info {
+/*#event-info {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -24,4 +24,4 @@
 #event-info-content {
     width: 80%;
     margin: 0 auto;
-};
+};*/
