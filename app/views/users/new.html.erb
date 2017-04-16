@@ -5,23 +5,75 @@
     <title>Sign up</title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<!-- Sign in with Google -->
+<%#= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+ <%#= javascript_include_tag "application", "data-turbolinks-track" => true %>
+ <%#= csrf_meta_tags %>
+<!-- Sign in with Google -->
   </head>
   <body id="sign-up-back" >
     <img id="logo" src="http://i66.tinypic.com/2jca5ck.jpg" border="0" alt="Image and video hosting by TinyPic">
 
-  <div>
-    <% if current_user %>
-      Signed in as <strong><%= current_user.name %></strong>!
+<!-- Sign in with Facebook -->
+    <div id="user-widget">
+      <% if current_user %>
+        Welcome <strong><%= current_user.name %></strong>!
       <%= link_to "Sign out", signout_path, id: "sign_out" %>
-    <% else %>
-      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-    <% end %>
-  </div>
+      <% else %>
+    <div id="fb-btn">
+      <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
+      <span id="fb-text">
+        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+      </span>
+    </div>
+      <% end %>
+    </div>
+<!-- Sign in with Facebook -->
 
+<!-- Sign in with Google -->
+    <!-- <div> -->
+      <%# if current_user %>
+        <!-- Signed in as <strong><%#= current_user.name %></strong>! -->
+        <%#= link_to "Sign out", signout_path, id: "sign_out" %>
+      <%# else %>
+        <%#= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+      <%# end %>
+    <!-- </div> -->
+<!-- Sign in with Google -->
+    <div>
+      <%#= yield %>
+    </div>
 
+<!--
+    <div id="fb-btn">
+      <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
+      <span id="fb-text">
+          Signup with Facebook
+      </span>
+    </div> -->
+
+  <%= link_to signup_path do %>
+    <div id="login-btn-new">
+      <p id="login-text">
+        Sign up
+      </p>
+    </div>
+  <% end %>
+
+  <%= link_to login_index_path do %>
+    <div id="sign-btn-new">
+      <p id="sign-text">
+        Log in
+      </p>
+    </div>
+  <% end %>
 
   </body>
 </html>

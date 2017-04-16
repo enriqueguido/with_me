@@ -1,0 +1,85 @@
+.sign-up-submit {
+  position: absolute;
+  bottom: 140px;
+  background-color: #f67f00;
+  height: 10em;
+  width: 100%;
+  text-align: center;
+  margin-left: 0px;
+}
+.create-account {
+  /*text-align: center;*/
+  margin-top: 35px;
+  color: white;
+  font-size: 60px;
+  /*padding: .5em;*/
+}
+
+.sign-up-password-con {
+  position: absolute;
+  bottom: 465px;
+  color: #f67f00;
+  margin-left: 50px;
+  font-size: 35px;
+}
+
+#user_password_confirmation {
+  width: 500px;
+  height: 30px;
+  border-style: none;
+  border-bottom: 2px solid #f67f00;
+  background-color: white;
+  margin-left: 10px;
+  /*margin-bottom: 10px;*/
+}
+
+.sign-up-password {
+  position: absolute;
+  bottom: 580px;
+  color: #f67f00;
+  margin-left: 50px;
+  font-size: 35px;
+}
+
+#user_password {
+  width: 698px;
+  height: 30px;
+  border-style: none;
+  border-bottom: 2px solid #f67f00;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.sign-up-email {
+  position: absolute;
+  bottom: 698px;
+  color: #f67f00;
+  margin-left: 50px;
+  font-size: 35px;
+}
+
+#user_email {
+  width: 750px;
+  height: 30px;
+  border-style: none;
+  border-bottom: 2px solid #f67f00;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.sign-up-name {
+  position: absolute;
+  bottom: 815px;
+  color: #f67f00;
+  margin-left: 50px;
+  font-size: 35px;
+}
+
+#user_name {
+  width: 750px;
+  height: 30px;
+  border-style: none;
+  border-bottom: 2px solid #f67f00;
+  background-color: white;
+  margin-left: 10px;
+}

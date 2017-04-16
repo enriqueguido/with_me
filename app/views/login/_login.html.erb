@@ -1,0 +1,19 @@
+<h1>Log In</h1>
+
+<div class="log-in">
+  <div class="log-in-page">
+    <%= form_for(@user) do |f| %>
+  <div class="log-in-email">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="log-in-password">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="log-in-button">
+    <%= f.submit "Submit", class: "button-log-in" %>
+  </div>
+    <% end %>
+  </div>
+</div>

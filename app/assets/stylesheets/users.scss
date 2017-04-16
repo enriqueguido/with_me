@@ -69,3 +69,56 @@
   height: 3em;
 }
 // search bar
+
+//login buttons
+#fb-btn{
+  height: 10em;
+  // border-radius: 25px;
+  background-color: #3b5998;
+}
+
+#sign_in {
+  color: white;
+}
+
+.fa-facebook{
+  color: white;
+  margin-left: .5em;
+  margin-top: .5em;
+}
+
+#fb-text{
+  color: white;
+  font-size: 4em;
+  padding: .5em;
+  margin-left: 2em;
+  padding-top: -.25em;
+}
+
+#login-btn-new{
+  margin-top: 10px;
+  height: 10em;
+  // border-radius: 25px;
+  background-color: #f67f00;
+}
+
+#login-text{
+  text-align: center;
+  color: white;
+  font-size: 4em;
+  padding: .5em;
+}
+
+#sign-btn-new{
+  margin-top: 10px;
+  height: 10em;
+  // border-radius: 25px;
+  background-color: white;
+}
+
+#sign-text{
+  text-align: center;
+  color: #f67f00;
+  font-size: 4em;
+  padding: .5em;
+}
