@@ -4,6 +4,8 @@
   height:8.9em;
   background-color: #f67f00;
   margin-top: -1em;
+  margin-left: -1em;
+  margin-right: -2em;
 }
 
 #nav-text{
@@ -22,7 +24,8 @@
 //nav
 .form-control{
   font-size: 3em;
-  width: 80.7% !important;
+  width: 79.3% !important;
+  margin-left: -.15em;
 }
 
 .input-group-btn{
@@ -37,9 +40,10 @@
   width: 4.5em;
   text-align: center;
   font-size: 3em;
-  height: 3em;
+  height: 3.1em;
   background-color: #f67f00;
   color: white;
+  margin-right: -.28em;
 }
 
 // #login-btn{
@@ -75,21 +79,24 @@
 }
 
 img{
-  width:100vw;
+  width:101vw;
   color: white;
   font: bold 12px/45px Helvetica, Sans-Serif;
   letter-spacing: -1px;
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.7);
+  margin-left: -.5em;
+  
 }
 
 #event_name{
   background-color: rgba(0, 0, 0, 0.8);
   position: relative;
-  top: -12rem;
-  width: 100;
+  top: -13rem;
+  width: 101;
   height: 12rem;
   overflow:hidden;
+  margin-left: -.15em;
 }
 
 #event_name_wrapper{
@@ -111,5 +118,8 @@ h4{
 #error-back{
   background-image:url(https://media.giphy.com/media/1RkDDoIVs3ntm/giphy.gif);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 102% 102%;
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: -8em;
 }
