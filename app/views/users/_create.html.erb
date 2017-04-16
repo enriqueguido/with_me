@@ -1,21 +1,27 @@
-<h1>Sign up</h1>
+<!-- <h1>Sign up</h1> -->
 
 <div class="sign-up">
   <div class="sign-up-page">
     <%= form_for(@user) do |f| %>
+  <div class="sign-up-name">
       <%= f.label :name %>
       <%= f.text_field :name %>
-
+    </div>
+    <div class="sign-up-email">
       <%= f.label :email %>
       <%= f.email_field :email %>
-
+    </div>
+    <div class="sign-up-password">
       <%= f.label :password %>
       <%= f.password_field :password %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
+    </div>
+    <div class="sign-up-password-con">
+      <%= f.label :password_confirmation, "Password Confirmation" %>
       <%= f.password_field :password_confirmation %>
-
-      <%= f.submit "Create my account", class: "create-account" %>
+    </div>
+    <div class="sign-up-submit">
+      <%= f.submit "Sign Up", class: "create-account" %>
+    </div>
     <% end %>
   </div>
 </div>
