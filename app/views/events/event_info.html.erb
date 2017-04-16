@@ -38,8 +38,9 @@
 
 <% @event.comments.each do |comment| %>
   <p>
-    <%= link_to 'Edit', edit_event_comment_path(@event) %>
-    <%= link_to 'Delete', comments_destroy_path :comment %>
+    <%= link_to 'Edit', edit_event_comment_path(comment.event, comment) %>
+
+    <%= link_to 'Delete', event_comment_path(comment.event, comment), method: :delete, data: {confirm: "Are you sure?"} %>
     <strong><%= comment.commenter %>: </strong>
     <%= comment.body %>
     </p>

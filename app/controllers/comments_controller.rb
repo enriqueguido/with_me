@@ -11,17 +11,25 @@ class CommentsController < ApplicationController
     end
 
      def destroy
+       @event = Event.find(params[:event_id])
+       @comment = @event.comments.find(params[:id])
        @comment.destroy
-       redirect_to event_path(@event)
+       redirect_to event_info_path(@event)
      end
 
      def edit
          @event = Event.find(params[:event_id])
-         @comment = @event.comments.create(params[:comment])
+         @comment = @event.comments.find(params[:id])
      end
 
-     def update(comment_params)
-         @event = Event.find(params[:id])
+     def update
+        @event = Event.find(params[:event_id])
+        @comment = @event.comments.find(params[:id])
+        if @comment.update(comment_params)
+            redirect_to event_info_path(@event)
+        else
+            render 'edit'
+        end
      end
 
      private
