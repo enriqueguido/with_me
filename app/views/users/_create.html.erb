@@ -5,7 +5,7 @@
     <%= form_for(@user) do |f| %>
   <div class="sign-up-name">
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, :class =>"txt-bx" %>
     </div>
     <div class="sign-up-email">
       <%= f.label :email %>
@@ -18,7 +18,7 @@
     <div class="sign-up-password-con">
       <%= f.label :password_confirmation, "Password Confirmation" %>
       <%#= f.password_field :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, :class =>"txt-bx" %>
     </div>
     <div >
       <%= f.submit "Sign Up", class: "create-account", class: "sign-up-submit"%>

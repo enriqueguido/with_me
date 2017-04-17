@@ -35,6 +35,9 @@
   background-color: white;
   margin-left: 10px;
   /*margin-bottom: 10px;*/
+  font-size: 2em;
+  padding: 25px;
+  color: #757575;
 }
 
 .sign-up-password {
