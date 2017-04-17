@@ -32,11 +32,12 @@
 //nav
 .form-control{
   font-size: 3em;
-  width: 79.3% !important;
+  width: 80.2% !important;
   margin-left: -.15em;
   position: fixed;
   z-index: 1;
-  margin-top: 123px;
+  margin-top: 126px;
+  border-style: none;
 }
 
 .input-group-btn{
@@ -48,13 +49,15 @@
 }
 
 #search-btn{
-  width: 4.5em;
+  width: 4.7em;
   text-align: center;
   font-size: 3em;
-  height: 3.1em;
-  background-color: #f67f00;
-  color: white;
+  height: 3.05em;
+  background-color: white;
+  color: #757575;
   margin-right: -.28em;
+  margin-top: 125px;
+
 }
 
 // #login-btn{
