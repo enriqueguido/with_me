@@ -35,14 +35,12 @@
 <!-- ********************* -->
 <div id="comment-section">
 
-<div id="add-comment-footer">
-<h2>Add a comment:</h2>
-<%= form_for([@event, @event.comments.build]) do |f| %>
+    <h2>Add a comment:</h2>
+  <%= form_for([@event, @event.comments.build]) do |f| %>
   <span id="commenter">
 
     <%= f.text_field :commenter, id: "comm-text" %>
   </span>
-
   <p id="comment-body">
     <!-- <%= f.label :body %><br> -->
     <%= f.text_area :body, id: "comm-body" %>
