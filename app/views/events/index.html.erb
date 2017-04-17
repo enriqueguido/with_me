@@ -8,7 +8,7 @@
 
 <div id="search" class="input-group">
 <span class="input-group-btn">
-<%= form_tag(root_path, :method => "get", id: "search-form", ) do %>
+<%= form_tag(events_path, :method => "get", id: "search-form", ) do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Events", :class => "form-control"%>
     <%= submit_tag "Search", :name => nil, :class => "btn-default", :id => "search-btn" %>
 <% end %>
@@ -16,7 +16,7 @@
 </div>
 
 <div id="spacer">
-  
+
 </div>
 
 <% @events.each do |event| %>
