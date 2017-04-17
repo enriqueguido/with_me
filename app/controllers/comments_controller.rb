@@ -6,7 +6,8 @@ class CommentsController < ApplicationController
 
     def create
       @event = Event.find(params[:event_id])
-      @comment = @event.comments.create(comment_params)
+      Comment.create(user: current_user, event: @event, body: comment_params[:body])
+    #   @comment = @event.comments.create(comment_params)
       redirect_to event_path(@event)
     end
 
@@ -34,6 +35,6 @@ class CommentsController < ApplicationController
 
      private
        def comment_params
-         params.require(:comment).permit(:commenter, :body, :event_id)
+         params.require(:comment).permit(:user_id, :body, :event_id)
        end
 end

@@ -62,8 +62,8 @@ Rails.application.routes.draw do
       resources :comments
   end
 
-  resources :users
+  resources :users do
   get '/signup' => 'users#signup', as: 'signup'
-  # resources :eventbrite_api
   resources :login
+    end
 end
