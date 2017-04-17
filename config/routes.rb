@@ -62,8 +62,8 @@ Rails.application.routes.draw do
       resources :comments
   end
 
-  resources :users do
   get '/signup' => 'users#signup', as: 'signup'
+
+  resources :users
   resources :login
-    end
 end
