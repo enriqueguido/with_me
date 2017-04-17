@@ -6,9 +6,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
       redirect_to '/'
     else
       redirect_to '/signup'
@@ -35,9 +35,10 @@ private
   end
 
   def authenticate_user
-      if current_user_id == user.id
+      if session[:user_id] == @user.id
           true
       else
           redirect_to new_login_path
+      end
   end
 end

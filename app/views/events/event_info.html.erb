@@ -39,7 +39,7 @@
   <%= form_for([@event, @event.comments.build]) do |f| %>
   <span id="commenter">
 
-    <%= f.text_field :commenter, id: "comm-text" %>
+    <%= current_user.name %>
   </span>
   <p id="comment-body">
     <!-- <%= f.label :body %><br> -->
@@ -57,7 +57,7 @@
     <% @event.comments.each do |comment| %>
       <p>
 
-        <strong><%= comment.commenter %>: </strong>
+        <strong><%= current_user.name %>: </strong>
         <%= comment.body %>
         </p>
 
