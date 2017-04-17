@@ -13,15 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-/*#event-info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-};
-
-#event-info-content {
-    width: 80%;
-    margin: 0 auto;
-};*/
