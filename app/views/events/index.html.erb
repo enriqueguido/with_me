@@ -15,6 +15,10 @@
 </span>
 </div>
 
+<div id="spacer">
+  
+</div>
+
 <% @events.each do |event| %>
 <div id="event">
   <%= link_to image_tag(event.logo), event_info_path(event), :id => "event_pic" %>
