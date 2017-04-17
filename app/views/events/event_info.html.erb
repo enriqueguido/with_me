@@ -36,7 +36,7 @@
 
 <div id="comment-section">
 
-<h2>Comments</h2>
+<h2>Comments:</h2>
 
 <div id="scrollable-content">
 
@@ -56,13 +56,14 @@
 <div id="add-comment-footer">
 <h2>Add a comment:</h2>
 <%= form_for([@event, @event.comments.build]) do |f| %>
-  <p id="commenter">
-    <%= f.label :user_name %><br>
-    <%= f.text_field :commenter %>
-  </p>
+  <span id="commenter">
+    <%= f.label :user_name %>
+    <%= f.text_field :commenter, id: "comm-text" %>
+  </span>
+
   <p id="comment-body">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <!-- <%= f.label :body %><br> -->
+    <%= f.text_area :body, id: "comm-body" %>
   </p>
   <p>
     <%= f.submit %>
@@ -74,9 +75,3 @@
 <%= link_to 'Back', root_path %>
 
 </center>
-
-</div>
-
-</div>
-
-</div>
