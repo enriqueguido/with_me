@@ -16,47 +16,47 @@ Rails.application.routes.draw do
 
   get 'home/show'
 
-  get 'eventbrite_api/index'
+  # get 'eventbrite_api/index'
+  #
+  # get 'eventbrite_api/new'
+  #
+  # get 'eventbrite_api/create'
+  #
+  # get 'eventbrite_api/update'
+  #
+  # get 'eventbrite_api/destroy'
 
-  get 'eventbrite_api/new'
+  # get 'events/index' => "events#index"
 
-  get 'eventbrite_api/create'
-
-  get 'eventbrite_api/update'
-
-  get 'eventbrite_api/destroy'
-
-  root "events#index"
-
-  get 'events/new'
-
-  get 'events/create'
-
-  get 'events/update'
-
-  get 'events/destroy'
+  # get 'events/new'
+  #
+  # get 'events/create'
+  #
+  # get 'events/update'
+  #
+  # get 'events/destroy'
 
   get 'events/:id' => 'events#event_info', as: 'event_info'
 
-  get 'users/new'
-
-  get 'comments/new'
-
-  get 'comments/create'
-
-  get 'comments/edit'
-
-  get 'comments/update'
-
-  get 'comments/destroy'
-
-  get 'users/new' => 'users#new'
-
-  get 'users/create'
-
-  get 'users/update'
-
-  get 'users/destroy'
+  # 'users/new'
+  #
+  # get 'comments/new'
+  #
+  # get 'comments/create'
+  #
+  # get 'comments/edit'
+  #
+  # get 'comments/update'
+  #
+  # get 'comments/destroy'
+  #
+  root 'users#new'
+  #
+  # get 'users/create'
+  #
+  # get 'users/update'
+  #
+  # get 'users/destroy'
 
   resources :events do
       resources :comments
