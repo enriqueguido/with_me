@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    before_action :authenticate_user, only: [:update, :destroy,]
+
   def new
     @user = User.new
   end
@@ -30,5 +32,12 @@ private
 
   def user_params
   params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def authenticate_user
+      if current_user_id == user.id
+          true
+      else
+          redirect_to new_login_path
   end
 end
