@@ -37,6 +37,12 @@ class EventsController < ApplicationController
       @event = Event.find(params[:id])
   end
 
+  # def attend
+  #   @event = Event.find(params[:id])
+  #   @event.users.new(user_id: current_user)
+  #   @event.save!
+  # end
+
 # private
 #
 #   def api
