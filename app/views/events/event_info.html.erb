@@ -36,31 +36,31 @@
 
 <div id="comment-section">
 
-<h2>Comments:</h2>
-
-<div id="scrollable-content">
-
-<% @event.comments.each do |comment| %>
-  <p>
-    <%= link_to 'Edit', edit_event_comment_path(comment.event, comment) %>
-
-    <%= link_to 'Delete', event_comment_path(comment.event, comment), method: :delete, data: {confirm: "Are you sure?"} %>
-    <strong><%= comment.commenter %>: </strong>
-    <%= comment.body %>
-    </p>
-
-<% end %>
-
+<div class="comment-name">
+  <h2>Comments:</h2>
 </div>
 
+<div id="scrollable-content">
+  <% @event.comments.each do |comment| %>
+    <p>
+      <%= link_to 'Edit', edit_event_comment_path(comment.event, comment) %>
+
+      <%= link_to 'Delete', event_comment_path(comment.event, comment), method: :delete, data: {confirm: "Are you sure?"} %>
+      <strong><%= comment.commenter %>: </strong>
+      <%= comment.body %>
+    </p>
+  <% end %>
+</div>
+
+
 <div id="add-comment-footer">
-<h2>Add a comment:</h2>
-<%= form_for([@event, @event.comments.build]) do |f| %>
+
+    <h2>Add a comment:</h2>
+  <%= form_for([@event, @event.comments.build]) do |f| %>
   <span id="commenter">
     <%= f.label :user_name %>
     <%= f.text_field :commenter, id: "comm-text" %>
   </span>
-
   <p id="comment-body">
     <!-- <%= f.label :body %><br> -->
     <%= f.text_area :body, id: "comm-body" %>

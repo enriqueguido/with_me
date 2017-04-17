@@ -148,5 +148,19 @@ h4{
 #comm-body {
   border-color: #f67f00;
   border-style: solid;
-  border-width: 10px;
+  border-width: 1px;
+  height: 15em;
+  width: 90%;
+}
+
+#comment-name {
+  position: absolute;
+  bottom: 100px;
+}
+
+#scrollable-content {
+  // position: absolute;
+  // bottom: 150px;
+  
+
 }
