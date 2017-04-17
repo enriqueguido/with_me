@@ -14,7 +14,7 @@
 #sign-up-back{
   background-image:url(https://media.giphy.com/media/3oEduXeT0j1Bl5uWHK/giphy.gif);
   background-repeat: no-repeat;
-  background-size: 175vh;
+  background-size: 180vh;
 }
 
 #logo{
@@ -22,13 +22,14 @@
   width: 100vw;
   margin-top: -18em;
   background: rgba(0, 0, 0, 0);
+  margin-left: 4em;
 }
 // New user screen
 
 #log-in-back{
   background-image:url(https://media.giphy.com/media/4XeLHhzQy6YyA/giphy.gif);
   background-repeat: no-repeat;
-  background-size: 180vh;
+  background-size: 185vh;
 }
 
 #login-logo{
@@ -75,6 +76,8 @@
   height: 10em;
   // border-radius: 25px;
   background-color: #3b5998;
+  width: 110vw;
+  text-align: center;
 }
 
 #sign_in {
@@ -100,6 +103,9 @@
   height: 10em;
   // border-radius: 25px;
   background-color: #f67f00;
+  width: 110vw;
+  text-align: center;
+
 }
 
 #login-text{
@@ -107,7 +113,7 @@
   color: white;
   font-size: 4em;
   padding: .5em;
-  margin-left: 1.5em;
+  margin-left: 0;
 }
 
 #sign-btn-new{
@@ -115,6 +121,8 @@
   height: 10em;
   // border-radius: 25px;
   background-color: white;
+  width: 110vw;
+  text-align: center;
 }
 
 #sign-text{
@@ -122,5 +130,5 @@
   color: #f67f00;
   font-size: 4em;
   padding: .5em;
-  margin-left: 1.5em;
+  margin-left: 0;
 }
