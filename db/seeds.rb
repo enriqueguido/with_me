@@ -128,17 +128,50 @@ puts "done"
     )
 end
 
-      #  @url = "https://www.eventbriteapi.com/v3/events/search?token=SM4RJIL6AMM75DCOVOFM"
-      #  puts "Calling API"
-      #  @response = HTTParty.get @url
-      #  puts "done"
-      #   @response['events'].each do |event|
-      #     Event.create(
-      #       name: event['name']['text'],
-      #       description: event['description']['text'],
-      #       tz: event['start']['timezone'],
-      #       start: DateTime.iso8601(event['start']['local']).to_s,
-      #       end: DateTime.iso8601(event['end']['local']).to_s,
-      #       logo: event['logo']['url']
-      #       )
-      #   end
+@url = "https://www.eventbriteapi.com/v3/events/search/?q=gowithme&token=SM4RJIL6AMM75DCOVOFM"
+puts "Calling API"
+@response = HTTParty.get @url
+puts "done"
+  @response['events'].each do |event|
+  image = event['logo'].nil? ? '' : event['logo']['url']
+  Event.create(
+    name: event['name']['text'],
+    description: event['description']['text'],
+    tz: event['start']['timezone'],
+    start: DateTime.iso8601(event['start']['local']).to_s,
+    end: DateTime.iso8601(event['end']['local']).to_s,
+    logo: image
+    )
+end
+
+@url = "https://www.eventbriteapi.com/v3/events/search/?q=Super+Secret+Teacup+Convention&token=SM4RJIL6AMM75DCOVOFM"
+puts "Calling API"
+@response = HTTParty.get @url
+puts "done"
+  @response['events'].each do |event|
+  image = event['logo'].nil? ? '' : event['logo']['url']
+  Event.create(
+    name: event['name']['text'],
+    description: event['description']['text'],
+    tz: event['start']['timezone'],
+    start: DateTime.iso8601(event['start']['local']).to_s,
+    end: DateTime.iso8601(event['end']['local']).to_s,
+    logo: image
+    )
+end
+
+
+#  @url = "https://www.eventbriteapi.com/v3/events/search?token=SM4RJIL6AMM75DCOVOFM"
+#  puts "Calling API"
+#  @response = HTTParty.get @url
+#  puts "done"
+#   @response['events'].each do |event|
+#     Event.create(
+#       name: event['name']['text'],
+#       description: event['description']['text'],
+#       tz: event['start']['timezone'],
+#       start: DateTime.iso8601(event['start']['local']).to_s,
+#       end: DateTime.iso8601(event['end']['local']).to_s,
+#       logo: event['logo']['url']
+#       )
+#   end
