@@ -8,7 +8,7 @@
 
 <div id="search" class="input-group">
 <span class="input-group-btn">
-<%= form_tag(root_path, :method => "get", id: "search-form", ) do %>
+<%= form_tag(events_path, :method => "get", id: "search-form", ) do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Events", :class => "form-control"%>
     <%= submit_tag "Search", :name => nil, :class => "btn-default", :id => "search-btn" %>
 <% end %>
@@ -24,18 +24,18 @@
 <img class= "event-logo"><%= image_tag @event.logo %></img>
 
 <div id="event-info-content event_name">
-<center>
-<h1><%= @event.name %></h1>
-<p><%= @event.description  %></p>
-<p><%= @event.tz %></p>
-<p><%= @event.start %></p>
-<p><%= @event.end %></p>
-
+<div id="event-info-text">
+  <h1><%= @event.name %></h1>
+  <p><%= @event.description  %></p>
+  <p>Location: <%= @event.tz %></p>
+  <p>Start time: <%= @event.start %></p>
+  <p>End time: <%= @event.end %></p>
+</div> <!-- event info text -->
 <!-- COMMENT SECTION BELOW -->
 <!-- ********************* -->
 <div id="comment-section">
 
-    <h2>Add a comment:</h2>
+    <h2 id="center-add">Add a comment:</h2>
   <%= form_for([@event, @event.comments.build]) do |f| %>
   <span id="commenter">
 
@@ -44,17 +44,17 @@
     <%= f.text_area :body, id: "comm-body" %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Create a comment', :id => "lg-btn"%>
   </p>
 <% end %>
 
-    <h2>Comments:</h2>
+    <h2 id="center-add">Comments:</h2>
 
     <div id="scrollable-content">
 
     <% @event.comments.each do |comment| %>
       <p>
-          <strong><%= comment.user ? comment.user.name : "Bob" %>: </strong>
+          <strong><%= comment.user ? comment.user.name : nil %> </strong>
         <%= comment.body %>
         </p>
 
@@ -66,8 +66,7 @@
 
 </div>
 
+<%= link_to 'Back', events_path, :id => "back-btn" %>
 <!-- <%= link_to 'Attend', event_info_path %> -->
-
-<%= link_to 'Back', events_path %>
 
 </center>

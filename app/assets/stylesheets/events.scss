@@ -146,14 +146,18 @@ h4{
 #comm-text {
   height: 4em;
   width: 50%;
+
 }
 
 #comm-body {
   border-color: #f67f00;
   border-style: solid;
   border-width: 1px;
-  height: 15em;
-  width: 90%;
+  height: 5em;
+  width: 100vw;
+  font-size: 1.5em;
+  margin-left: -.27em;
+  margin-right: 0;
 }
 
 #comment-name {
@@ -162,8 +166,30 @@ h4{
 }
 
 #scrollable-content {
-  // position: absolute;
-  // bottom: 150px;
-  
+  height: 40em;
+}
 
+#lg-btn{
+  width: 100vw;
+  margin-left: -.15em;
+  font-size: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: white;
+  background-color: #f67f00;
+
+}
+
+#center-add{
+  text-align: center;
+}
+
+#event-info-text{
+  width: 100%;
+  text-align: justify;
+}
+
+#back-btn{
+  margin-left: 45%;
+  margin-top: 1em;
 }

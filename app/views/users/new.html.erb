@@ -23,9 +23,11 @@
 
 <!-- Sign in with Facebook -->
     <div id="user-widget">
+      <div id= "fb-sign">
       <% if current_user %>
         Welcome <strong><%= current_user.name %></strong>!
-      <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <%= link_to "Sign out", signout_path, id: "sign_out", :class => "fb-sign-out"%>
+      </div>
       <% else %>
     <div id="fb-btn">
       <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
