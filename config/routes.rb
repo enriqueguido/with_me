@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   # get 'events/new'
   #
-  # get 'events/create'
+   get 'events/new' => 'events#new'
   #
   # get 'events/update'
   #
