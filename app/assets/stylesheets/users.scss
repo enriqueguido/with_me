@@ -1,8 +1,34 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// index page
+// logo and background
+#logo{
+  display: block;
+  width: 75vw;
+  max-height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0);
+  margin-top: 5vh;
+}
 
-// New user screen
+#log-in-back{
+  background-image:url(https://media.giphy.com/media/4XeLHhzQy6YyA/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+  overflow: hidden;
+}
+
+#sign-up-back{
+  background-image:url(https://media.giphy.com/media/3oEduXeT0j1Bl5uWHK/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+  overflow: hidden;
+}
+// logo and background
+
+// Buttons
 #log-in{
   background-color: #f67f00;
 }
@@ -11,124 +37,169 @@
   color: #f67f00;
 }
 
-#sign-up-back{
-  background-image:url(https://media.giphy.com/media/3oEduXeT0j1Bl5uWHK/giphy.gif);
-  background-repeat: no-repeat;
-  background-size: 180vh;
-}
-
-#logo{
-  z-index: 1000;
-  width: 100vw;
-  margin-top: -18em;
-  background: rgba(0, 0, 0, 0);
-  margin-left: 4em;
-}
-// New user screen
-
-#log-in-back{
-  background-image:url(https://media.giphy.com/media/4XeLHhzQy6YyA/giphy.gif);
-  background-repeat: no-repeat;
-  background-size: 185vh;
-}
-
-#login-logo{
-  z-index: 1000;
-  width: 100vw;
-  margin-top: -10em;
-}
-// New user screen
-
-// search bar
-.input-group{
-  width: 100vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.25em;
-}
-
-.btn-primary{
-  background-color: #f67f00;
-  border-color: #f67f00;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary:active:focus {
-  color: #ffffff;
-  background-color: #f67f00;
-  border-color: #f67f00;
-}
-
-.form-control:focus{
-  border-color: #f67f00;
-}
-
-.form-control,
-.btn-primary{
-  height: 3em;
-}
-// search bar
-
-//login buttons
 #fb-btn{
-  height: 10em;
-  // border-radius: 25px;
+  margin-top: 5vh;
+  height: 6vh;
   background-color: #3b5998;
-  width: 110vw;
+  width: 100vw;
+  max-width: 400px;
+  position:absolute;
+  bottom: 0vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
   text-align: center;
-}
-
-#sign_in {
-  color: white;
-}
-
-.fa-facebook{
-  color: white;
-  margin-left: .5em;
-  margin-top: .5em;
 }
 
 #fb-text{
-  color: white;
-  font-size: 4em;
-  padding: .5em;
-  margin-left: 2em;
-  padding-top: -.25em;
+  color: white!important;
+  font-size: 2vh;
+  padding-top: 2vh;
+
 }
 
-#login-btn-new{
-  margin-top: 10px;
-  height: 10em;
-  // border-radius: 25px;
-  background-color: #f67f00;
-  width: 110vw;
+.fa-facebook-f:before,
+.fa-facebook:before{
+  color: white!important;
+  font-size: 4vh;
+  margin-right: 4vw;
+  margin-left: -5vw;
+  vertical-align:middle;
   text-align: center;
+}
 
+.fa{
+  padding-top: 1vh;
+
+}
+
+
+#login-btn-new{
+  margin-top: .5vh;
+  height: 6vh;
+  background-color: #f67f00;
+  width: 100vw;
+  text-align: center;
+  max-width: 400px;
+  position:absolute;
+  bottom: 12vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
 }
 
 #login-text{
   text-align: center;
   color: white;
-  font-size: 4em;
-  padding: .5em;
+  font-size: 2vh;
+  padding: 1.75vh;
   margin-left: 0;
 }
 
-#sign-btn-new{
-  margin-top: 10px;
-  height: 10em;
-  // border-radius: 25px;
+#signup-btn-new{
+  margin-top: .5vh;
+  height: 6vh;
   background-color: white;
-  width: 110vw;
+  width: 100vw;
   text-align: center;
+  max-width: 400px;
+  position:absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
 }
 
-#sign-text{
+#signup-text{
   text-align: center;
-  color: #f67f00;
-  font-size: 4em;
-  padding: .5em;
+  color: #f67f00 !important;
+  font-size: 2vh;
+  padding: 1.75vh;
   margin-left: 0;
 }
+
+#fb-sign{
+  color: white;
+  size: 3vh;
+  height: 6vh;
+  text-align: center;
+  padding: 1.75vh;
+  background-color: #3b5998;
+  width: 100vw;
+  max-width: 400px;
+  position:absolute;
+  bottom: 19vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+}
+
+#sign_out{
+  color:white;
+}
+// index page
+
+
+
+// signup page
+
+.sign-up-submit {
+  margin-top: .5vh;
+  height: 6vh;
+  background-color: #f67f00;
+  width: 100vw;
+  text-align: center;
+  max-width: 400px;
+  color: white;
+  font-size: 2vh;
+  position:absolute;
+  bottom: 2vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  border: none;
+}
+
+.form{
+  color: #f67f00;
+  width: 75vw;
+  max-width: 700px;
+  max-height: 40vh;
+  box-sizing: border-box;
+  align-content: center;
+  background-color: white;
+  border-radius: 5px;
+  text-align: left;
+  padding: 25px;
+  position:absolute;
+  top:50vh;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+}
+
+.form-control{
+  color: #f67f00;
+  font-size: 1.5em;
+  position:relative;
+  width:100% ;
+  margin-top: 0;
+  border-bottom: 2px solid #f67f00 !important;
+  border-top: 0;
+  border-left: 0;
+  border-right:0;
+  box-shadow: none;
+  outline: #f67f00 !important;
+}
+
+
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color:inherit;
+  text-decoration: none !important;
+}
+// signup page

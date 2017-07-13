@@ -1,28 +1,31 @@
-<!-- <h1>Sign up</h1> -->
 
-<div class="sign-up">
-  <div class="sign-up-page">
-    <%= form_for(@user) do |f| %>
-  <div class="sign-up-name">
-      <%= f.label :name %>
-      <%= f.text_field :name, :class =>"txt-bx" %>
+
+<div class="form">
+  <%= form_for(@user) do |f| %>
+
+    <div class="signup" >
+      <%= f.label :name, :class =>"cust-label"%>
+      <%= f.text_field :name, :class =>"cust-box", :class =>"form-control" %>
     </div>
-    <div class="sign-up-email">
-      <%= f.label :email %>
-      <%= f.email_field :email %>
+
+    <div class="signup" >
+      <%= f.label :email, :class =>"cust-label" %>
+      <%= f.email_field :email, :class =>"cust-box", :class =>"form-control"%>
     </div>
-    <div class="sign-up-password">
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+
+    <div class="signup" >
+      <%= f.label :password, :class =>"cust-label" %>
+      <%= f.password_field :password, :class =>"cust-box", :class =>"form-control"%>
     </div>
-    <div class="sign-up-password-con">
-      <%= f.label :password_confirmation, "Password Confirmation" %>
-      <%#= f.password_field :password_confirmation %>
-      <%= f.password_field :password_confirmation, :class =>"txt-bx" %>
+
+    <div class="signup" >
+      <%= f.label :confirmation, :class =>"cust-label"%>
+      <%= f.password_field :password_confirmation, :class =>"cust-box", :class =>"form-control" %>
     </div>
+</div>
+
     <div >
       <%= f.submit "Sign Up", class: "create-account", class: "sign-up-submit"%>
     </div>
-    <% end %>
-  </div>
-</div>
+
+  <% end %>

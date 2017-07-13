@@ -1,72 +1,53 @@
-<link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
 
-<div id="nav-div">
-  <span id="nav-text">
-    Go With Me
-  </span>
-</div>
 
-<div id="search" class="input-group">
+<!-- <div id="search" class="input-group">
 <span class="input-group-btn">
 <%= form_tag(events_path, :method => "get", id: "search-form", ) do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Events", :class => "form-control"%>
     <%= submit_tag "Search", :name => nil, :class => "btn-default", :id => "search-btn" %>
 <% end %>
 </span>
-</div>
+</div> -->
 
-<div id="spacer">
+<div id="event-info-modal">
 
-</div>
+<%= image_tag @event.logo %>
+  <p id="event-name"><%= @event.name %></p>
+  <p id="event-info-desc"><%= @event.description %></p>
+    <p class="deets" >Location: <%= @event.tz %></p>
+    <p class="deets" >Start time: <%= @event.start %></p>
+    <p class="deets" >End time: <%= @event.end %></p>
 
-<div id="event-info">
 
-<img class= "event-logo"><%= image_tag @event.logo %></img>
 
-<div id="event-info-content event_name">
-<div id="event-info-text">
-  <h1><%= @event.name %></h1>
-  <p><%= @event.description  %></p>
-  <p>Location: <%= @event.tz %></p>
-  <p>Start time: <%= @event.start %></p>
-  <p>End time: <%= @event.end %></p>
-</div> <!-- event info text -->
-<!-- COMMENT SECTION BELOW -->
-<!-- ********************* -->
-<div id="comment-section">
 
-    <h2 id="center-add">Add a comment:</h2>
-  <%= form_for([@event, @event.comments.build]) do |f| %>
-  <span id="commenter">
+  <!-- COMMENT SECTION BELOW -->
 
-  </span>
-  <p id="comment-body">
-    <%= f.text_area :body, id: "comm-body" %>
-  </p>
-  <p>
-    <%= f.submit 'Create a comment', :id => "lg-btn"%>
-  </p>
-<% end %>
+<div id="whole-comment-section">
 
-    <h2 id="center-add">Comments:</h2>
-
-    <div id="scrollable-content">
-
-    <% @event.comments.each do |comment| %>
-      <p>
-          <strong><%= comment.user ? comment.user.name : nil %> </strong>
-        <%= comment.body %>
-        </p>
-
+  <p id="comment-head">Add your comment:</p>
+    <%= form_for([@event, @event.comments.build]) do |f| %>
+      <span id="commenter"></span>
+        <p id="comment-body"><%= f.text_area :body, id: "comm-body" %></p>
+        <p><%= f.submit 'Create a comment', :id => "comm-btn"%></p>
     <% end %>
 
-    </div>
+  <p id="comment-head">Comments:</p>
 
-</div>
+  <div id="comment-section">
+    <div id="comment-box">
+      <% @event.comments.each do |comment| %>
+        <div id = "comm-user"><%= comment.user ? comment.user.name  : nil %></div>
+        <div id = "comm-user-body"><%= comment.body %></div>
+    </div><!--comment-box-->
+      <div id="back-btn"><%= link_to events_path do %>Back<% end %></div>
+    <% end %>
 
-</div>
 
-<%= link_to 'Back', events_path, :id => "back-btn" %>
-<!-- <%= link_to 'Attend', event_info_path %> -->
 
-</center>
+
+  </div><!--comment-section-->
+
+</div><!--whole-comment-section-->
+
+</div><!--event-info-modal-->

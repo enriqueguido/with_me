@@ -1,94 +1,57 @@
+#logo{
+  max-height: 50vh;
+}
+
 .sign-up-submit {
-  position: absolute;
-  bottom: 140px;
+  margin-top: .5vh;
+  height: 6vh;
   background-color: #f67f00;
-  height: 3em;
-  width: 110vw;
+  width: 100vw;
   text-align: center;
-  margin-left: -10px;
-  color:white;
-  font-size: 3em;
-  border: none;
-}
-.create-account {
-  /*text-align: center;*/
-  margin-top: 35px;
+  max-width: 400px;
   color: white;
-  font-size: 60px;
-  /*padding: .5em;*/
-  background-color: #f67f00;
+  font-size: 2vh;
+  position:absolute;
+  bottom: 2vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
 }
 
-.sign-up-password-con {
-  position: absolute;
-  bottom: 465px;
+.form{
   color: #f67f00;
-  margin-left: 50px;
-  font-size: 35px;
-}
-
-#user_password_confirmation {
-  width: 500px;
-  height: 30px;
-  border-style: none;
-  border-bottom: 2px solid #f67f00;
+  width: 75vw;
+  max-width: 700px;
+  max-height: 40vh;
+  box-sizing: border-box;
+  align-content: center;
   background-color: white;
-  margin-left: 10px;
-  /*margin-bottom: 10px;*/
-  font-size: 2em;
+  border-radius: 5px;
+  text-align: left;
   padding: 25px;
-  color: #757575;
+  position:absolute;
+  top:50vh;
+  bottom: 10vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
 }
 
-.sign-up-password {
-  position: absolute;
-  bottom: 580px;
-  color: #f67f00;
-  margin-left: 50px;
-  font-size: 35px;
+.form-control{
+  font-size: 1.5em;
+  color: #f67f00!important;
+  position:relative;
+  width:100% !important;
+  margin-top: 0;
+  border-bottom: 2px solid #f67f00 !important;
+  border-top: 0!important;
+  border-left: 0!important;
+  border-right:0!important;
+  box-shadow: none!important;
 }
 
-#user_password {
-  width: 698px;
-  height: 30px;
-  border-style: none;
-  border-bottom: 2px solid #f67f00;
-  background-color: white;
-  margin-left: 10px;
-}
-
-.sign-up-email {
-  position: absolute;
-  bottom: 698px;
-  color: #f67f00;
-  margin-left: 50px;
-  font-size: 35px;
-}
-
-#user_email {
-  width: 750px;
-  height: 30px;
-  border-style: none;
-  border-bottom: 2px solid #f67f00;
-  background-color: white;
-  margin-left: 10px;
-}
-
-.sign-up-name {
-  position: absolute;
-  bottom: 815px;
-  color: #f67f00;
-  margin-left: 50px;
-  font-size: 35px;
-}
-
-#user_name {
-  width: 750px;
-  height: 30px;
-  border-style: none;
-  border-bottom: 2px solid #f67f00;
-  background-color: white;
-  margin-left: 10px;
+input{
+  width:100vw;
 }
 
 a:link,

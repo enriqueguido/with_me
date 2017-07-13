@@ -1,88 +1,60 @@
+#logo{
+  display: block;
+  width: 75vw;
+  max-height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0);
+  margin-top: 5vh;
+}
 
 .log-in-submit {
-  position: absolute;
-  bottom: 140px;
+  margin-top: .5vh;
+  height: 6vh;
   background-color: #f67f00;
-  height: 3em;
-  width: 110vw;
+  width: 100vw;
   text-align: center;
-  color:white;
-  font-size: 3em;
-  border: none;
-  margin-left: -8px;
-}
-.button-log-in {
-  /*text-align: center;*/
-  margin-top: 35px;
+  max-width: 400px;
   color: white;
-  font-size: 60px;
-  /*padding: .5em;*/
-  background-color: #f67f00;
+  font-size: 2vh;
+  position:absolute;
+  bottom: 2vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  border: none;
 }
 
-.log-in-password {
-  position: absolute;
-  bottom: 580px;
+.log-form{
   color: #f67f00;
-  margin-left: 50px;
-  font-size: 35px;
-}
-
-#user_password {
-  width: 698px;
-  height: 30px;
-  border-style: none;
-  border-bottom: 2px solid #f67f00;
+  width: 75vw;
+  max-width: 700px;
+  max-height: 20vh;
+  box-sizing: border-box;
+  align-content: center;
   background-color: white;
-  margin-left: 10px;
-  font-size: 2em;
+  border-radius: 5px;
+  text-align: left;
   padding: 25px;
-  color: #757575;
+  position:absolute;
+  top:50vh;
+  bottom: 10vh;
+  left: 0;
+  right: 0;
+  margin:0 auto;
 }
 
-.log-in-email {
-  position: absolute;
-  bottom: 698px;
+.form-control{
   color: #f67f00;
-  margin-left: 50px;
-  font-size: 35px;
-}
-
-#user_email {
-  width: 750px;
-  height: 30px;
-  border-style: none;
-  border-bottom: 2px solid #f67f00;
-  background-color: white;
-  margin-left: 10px;
-  font-size: 2em;
-  padding: 25px;
-  color: #757575;
-}
-
-.sign-up-name {
-  position: absolute;
-  bottom: 815px;
-  color: #f67f00;
-  margin-left: 50px;
-  font-size: 35px;
-}
-
-#user_name {
-  width: 740px;
-  border-style: none;
-  border-bottom: 2px solid #f67f00;
-  background-color: white;
-  margin-left: 10px;
-  font-size: 2em;
-  padding: 25px;
-  color: #757575;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active{
-  color:inherit;
-  text-decoration: none !important;
+  font-size: 1.5em;
+  position:relative;
+  width:100% ;
+  margin-top: 0;
+  border-bottom: 2px solid #f67f00 !important;
+  border-top: 0;
+  border-left: 0;
+  border-right:0;
+  box-shadow: none;
+  outline: #f67f00 !important;
 }

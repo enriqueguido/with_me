@@ -3,23 +3,83 @@
   <head>
     <title>WithMe</title>
     <%= csrf_meta_tags %>
-<!-- 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag 'application', params[:controller], :media => 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">GoWithMe</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <!--signin/login buttons-->
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to signup_path do %>
+                <span class="glyphicon glyphicon-user"></span>
+                Sign Up
+              <% end %>
+            </li>
+            <li>
+              <%= link_to login_index_path do %>
+                <span class="glyphicon glyphicon-log-in"></span>
+                Login
+              <% end %>
+            </li>
+          </ul>
+          <!--signin/login buttons-->
+
+
+
+          <!--search-->
+          <div class="navbar-form  navbar-right " role="search">
+            <div class="input-group">
+              <%= form_tag(events_path, :method => "get", id: "search-form", ) do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search Events", :class => "form-control"%>
+                  <div class="input-group-btn">
+                    <%= button_tag(type: "submit button", class: "btn btn-default") do %>
+                      <i class="glyphicon glyphicon-search"></i>
+                    <% end %> <!--input-group-btn do-->
+                  </div> <!-- input-group-btn-->
+              <% end %><!--form_tag-->
+            </div><!--input-group-->
+          </div><!--main search div-->
+          <!--search-->
+
+        </div><!--navbar-header-->
+      </div><!--container-fluid-->
+  </nav>
+
+
+
+
+
+
+
+
+
 
   <body>
     <%= yield %>
   </body>
 
-  <!-- <script
+<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script> -->
-
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>

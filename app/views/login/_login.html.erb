@@ -1,24 +1,20 @@
-
-<!-- <h1>Log In</h1> -->
-
-<!-- <div id="log-in-logo">
-   <img id="logo" src="http://i66.tinypic.com/2jca5ck.jpg" border="0" alt="Image and video hosting by TinyPic">
-</div> -->
-
 <div class="log-in">
-  <div class="log-in-page">
+  <div class="log-form">
     <%= form_for(@user) do |f| %>
-  <div class="log-in-email">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
+      <div class="log-in-email">
+        <%= f.label :email %>
+        <%= f.email_field :email, :class =>"cust-box", :class =>"form-control" %>
+      </div>
+
+      <div class="log-in-password">
+        <%= f.label :password %>
+        <%= f.password_field :password, :class =>"cust-box", :class =>"form-control" %>
+      </div>
   </div>
-  <div class="log-in-password">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="log-in-button">
-    <%= f.submit "Submit", class: "button-log-in", class: "log-in-submit"%>
-  </div>
+
+      <div class="log-in-button">
+        <%= f.submit "Submit", class: "button-log-in", class: "log-in-submit"%>
+      </div>
+
     <% end %>
-  </div>
 </div>
